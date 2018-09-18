@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("usn").value;
+        document.getElementById('display1').innerHTML = 
+                    document.getElementById("name").value;
+        document.getElementById('display2').innerHTML = 
+                    document.getElementById("grade").value;
+    }
+  </script>
+
+  </head>
+<body>
+
+  <form>
+    <label><b>FILL IN THE FOLLOWING FORM</b></label><br></br>
+    <label><b>USN</b></label><input type="text" name="message" id="usn"><br></br>
+    <label><b>NAME</b></label><input type="text" name="message" id="name"><br></br>
+    <label><b>GRADE</b></label><input type="text" name="message" id="grade"><br></br>
+
+  </form>
+
+  <input type="submit" onclick="showInput();"><br/>
+  <label>Your input: </label>
+  <p><span id='display'></span></p>
+  <p><span id='display1'></span></p>
+  <p><span id='display2'></span></p>
+
+</body>
+</html>
