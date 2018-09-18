@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> BAKERY MENU </title>
+
+<script type = "text/javascript">
+
+function addby()
+{
+ num1= document.getElementById("cake").value;
+ num2= document.getElementById("biscuit").value;
+ num3= document.getElementById("pastry").value;
+ var x = parseInt(num1)*20 + parseInt(num2)*15 + parseInt(num3)*12 ;
+ document.getElementById("result").innerHTML = x;
+}
+
+
+
+</script>
+
+<body>
+
+<h2>Bakery menu</h2>
+<p>choose the needed items</p>
+
+<label><b>cake (20)</b></label>
+    <input type="text" name="message" id="cake" ></br></br>
+
+    <label><b>biscuit (15)</b></label>
+    <input type="text" name="message" id="biscuit"></br></br>
+
+    <label><b>pastry (12)</b></label>
+    <input type="text" name="message" id="pastry"></br>
+
+<input type="button" value="  submit  " onClick="addby();"/>
+
+<p><span id='result'></span></p>
+
+</body>
+</head>
+</html>
+
+
+
+
