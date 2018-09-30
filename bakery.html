@@ -9,50 +9,57 @@
 function addby()
 {
  num1= document.getElementById("cake").value;
+ var e1 = document.getElementById("cakeflav");
+ var e2 = document.getElementById("biscuitflav");
+ var e3 = document.getElementById("pastryflav");
+ var price1 = e1.options[e1.selectedIndex].value;
+ var price2 = e2.options[e2.selectedIndex].value;
+ var price3 = e3.options[e3.selectedIndex].value;
+
  num2= document.getElementById("biscuit").value;
  num3= document.getElementById("pastry").value;
- var x = parseInt(num1)*20 + parseInt(num2)*15 + parseInt(num3)*12 ;
+ var x = parseInt(num1)*price1 + parseInt(num2)*price2 + parseInt(num3)*price3 ;
  document.getElementById("result").innerHTML = x;
 }
 </script>
 
 <body>
 
-<h2>Bakery menu</h2>
-<p>choose the needed items</p>
-
+<h1>Bakery menu</h1>
+<!-- <p>choose the needed items</p>
+ -->
 <label><b>cake (prices for flavor vary)</b></label></br>
 <label><b>Choose the flavor </b></label>
-<!--      <input type="text" name="message" id="cakeflav" ></br></br>
- -->  <select name="cake">
+  <select id="cakeflav">
   <option></option>
-  <option value="Pineapple">Pineapple</option>
-  <option value="chocolate">chocolate</option>
-  <option value="mixedfruit">mixedfruit</option>
-  <option value="Butterscotch">Butterscotch</option>
+  <option value="10">Pineapple(10)</option>
+  <option value="15">chocolate(15)</option>
+  <option value="12">mixedfruit(12)</option>
+  <option value="12">Butterscotch(12)</option>
   </select>
-</br>
-<!--  <input type="submit" value="Submit" onClick="addby();"></br>
- -->   
+</br>   
+  <label><b>Choose the number of cakes you want</b></label>
   <input type="text" name="message" id="cake" ></br></br>
 
     <label><b>biscuit (15)</b></label>
-  <select>
+  <select id="biscuitflav">
   <option></option>
-  <option value="jimjam">jimjam</option>
-  <option value="Vanilla">Vanilla</option>
+  <option value="20">jimjam(20)</option>
+  <option value="15">Vanilla(15)</option>
  </select></br></br>
+	  <label><b>Choose the number of biscuits you want</b></label> 
       <input type="text" name="message" id="biscuit"></br></br>
 
    
     <label><b>pastry (12)</b></label>
 
- <select>
+ <select id="pastryflav">
   <option></option>
-  <option value="Pineapple">Pineapple</option>
-  <option value="chocolate">chocolate</option>
+  <option value="10">Pineapple(10)</option>
+  <option value="12">chocolate(12)</option>
 	  <option value="Butterscotch">Butterscotch</option>
  </select></br></br>
+ 	  <label><b>Choose the number of pastries you want</b></label>
      <input type="text" name="message" id="pastry"></br>
 
    
@@ -63,3 +70,8 @@ function addby()
 </body>
 </head>
 </html>
+
+	
+
+
+
