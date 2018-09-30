@@ -1,4 +1,6 @@
-<!-- We have to create a menu based web page where we should include menu items such as cake ,pastries  etc whatever of your choice and when you click on these menu it should give you a drop down list of flavours with price -->
+<!-- We have to create a menu based web page where we should include menu items such as cake ,
+pastries  etc whatever of your choice and when you click on these menu it should give you a 
+drop down list of flavours with price -->
 
 <!DOCTYPE html>
 <html>
@@ -28,8 +30,8 @@ function addby()
 <h1>Bakery menu</h1>
 <!-- <p>choose the needed items</p>
  -->
-<label><b>cake (prices for flavor vary)</b></label></br>
-<label><b>Choose the flavor </b></label>
+<label><h2> CAKE </h2></label></br>
+<label><b>Choose the flavor </b></label>	
   <select id="cakeflav">
   <option></option>
   <option value="10">Pineapple(10)</option>
@@ -37,11 +39,12 @@ function addby()
   <option value="12">mixedfruit(12)</option>
   <option value="12">Butterscotch(12)</option>
   </select>
-</br>   
+</br></br>
   <label><b>Choose the number of cakes you want</b></label>
   <input type="text" name="message" id="cake" ></br></br>
 
-    <label><b>biscuit (15)</b></label>
+    <label><h2> BISCUIT </h2></label>
+    <label><b>Choose the flavor </b></label>	
   <select id="biscuitflav">
   <option></option>
   <option value="20">jimjam(20)</option>
@@ -51,13 +54,14 @@ function addby()
       <input type="text" name="message" id="biscuit"></br></br>
 
    
-    <label><b>pastry (12)</b></label>
+    <label><h2> PASTRY </h2></label>
+    <label><b>Choose the flavor </b></label>	
 
  <select id="pastryflav">
   <option></option>
   <option value="10">Pineapple(10)</option>
   <option value="12">chocolate(12)</option>
-	  <option value="Butterscotch">Butterscotch</option>
+  <option value="15">Butterscotch(15)</option>
  </select></br></br>
  	  <label><b>Choose the number of pastries you want</b></label>
      <input type="text" name="message" id="pastry"></br>
@@ -65,13 +69,10 @@ function addby()
    
 <input type="button" value="  submit  " onClick="addby();"/>
 
+</br></br>
+<p> Your total bill amount is : </p>
 <p><span id='result'></span></p>
 
 </body>
 </head>
 </html>
-
-	
-
-
-
