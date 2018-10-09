@@ -1,0 +1,57 @@
+
+ every web ask is get/post. Data is sent in a stream of bites. Xml/excel/csv/json - used for data representation in a structured way.
+ everything stored are indices already optimised ( in the form of hash) so access is already very fast.
+ hence these days XMl is replaced by json because json automatically stores in from of mean value pairs .
+ view inspect element? // check for errors
+
+<!DOCTYPE html>
+
+<html>
+<body>
+
+
+<table>
+ <tr id = "menu" >
+ <th id = "drinks"> Juice </th> 
+ <th id = "snacks"> Snacks </th> 
+ </tr>
+</table>
+<table class = "table " id = "MenuTable" hidden>
+ <tr><td id = "item1" ></td> <td id = "item2" > </td><td id = "item3" > </td></tr> 
+</table>
+
+<script>
+
+document.getElementById("drinks").addEventListener("click", myfunction2);
+document.getElementById("snacks").addEventListener("click", myfunction3);
+
+
+function myfunction2()
+{
+  var myObj, i , x = " ", y = " " ;
+  document.getElementById("MenuTable").removeAttribute("hidden");
+  myObj = 
+	{
+	  "name" : "Strawberry milkshake",
+	  "imagename" : "Strawberry",
+	  "ingredients" :["Strawberry" , "milk" , "cherry" , "ice-cream"]
+	};
+
+  y = myObj.name;
+  for(i in myObj.ingredients) //  same like a for each loop
+	{
+	  x+=myObj.ingredients[i] + "&nbsp";
+	} 
+  z = myObj.imagename;
+
+  document.getElementById("item1").innerHTML = y;
+  document.getElementById("item2").innerHTML = x;
+  document.getElementById("item3").innerHTML = '<img src="'+z+'.jpeg"/>'; 
+}
+
+function myfunction3()
+{
+  document.getElementById("MenuTable").removeAttribute("hidden");
+}
+
+</script>
